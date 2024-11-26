@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Cards</title>
+    <style>
+        .recipe-card {
+            border: 2px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            cursor: pointer;
+            background-color: #f9f9f9;
+        }
+        .recipe-card:hover {
+            background-color: #f0f0f0;
+        }
+        #recipeDetails {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+    <script src="JavaScript/JavaScript_3.js" defer></script>
+</head>
+<body>
+    <h1>Recipe Collection</h1>
+    
+    <div class="recipe-card" 
+         data-recipe="pasta" 
+         data-cook-time="20" 
+         data-difficulty="easy"
+         data-ingredients="pasta,tomato sauce,garlic,basil"
+         onclick="showRecipeDetails(this)">
+        <h3>Classic Pasta</h3>
+        <p>A simple Italian dish</p>
+    </div>
+
+    <div class="recipe-card" 
+         data-recipe="curry" 
+         data-cook-time="45" 
+         data-difficulty="medium"
+         data-ingredients="chicken,curry powder,coconut milk,rice"
+         onclick="showRecipeDetails(this)">
+        <h3>Chicken Curry</h3>
+        <p>Spicy and aromatic</p>
+    </div>
+
+    <div class="recipe-card" 
+         data-recipe="salad" 
+         data-cook-time="10" 
+         data-difficulty="easy"
+         data-ingredients="lettuce,tomatoes,cucumber,olive oil"
+         onclick="showRecipeDetails(this)">
+        <h3>Fresh Salad</h3>
+        <p>Light and healthy</p>
+    </div>
+
+    <div id="recipeDetails">
+        <h2 id="recipeName"></h2>
+        <p id="cookTime"></p>
+        <p id="difficulty"></p>
+        <p id="ingredients"></p>
+    </div>
+</body>
+</html>

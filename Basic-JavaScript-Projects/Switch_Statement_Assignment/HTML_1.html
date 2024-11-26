@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement - Animal Facts</title>
+    <script src="JavaScript/JavaScript_1.js" defer></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .animal-option {
+            color: blue;
+        }
+        #animalCanvas {
+            border: 3px solid #333;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Animal Facts Generator</h1>
+    <p class="instruction">Select an animal to learn a fun fact:</p>
+    <select id="animalSelect" onchange="getAnimalFact()">
+        <option value="" class="animal-option">Choose an animal...</option>
+        <option value="lion" class="animal-option">Lion</option>
+        <option value="elephant" class="animal-option">Elephant</option>
+        <option value="giraffe" class="animal-option">Giraffe</option>
+        <option value="penguin" class="animal-option">Penguin</option>
+        <option value="dolphin" class="animal-option">Dolphin</option>
+    </select>
+    <p id="factOutput" class="fact-text"></p>
+    <button onclick="highlightFacts()" class="button">Highlight All Text</button>
+
+    <canvas id="animalCanvas" width="400" height="200"></canvas>
+</body>
+</html>
